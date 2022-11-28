@@ -60,3 +60,83 @@ body {
         transform: scaleY(0.3) translate3d(0, -200px, 0);
     }
 }
+
+/* loading h2 part */
+
+.mini {
+    width: min-content;
+}
+
+h2 {
+    position: relative;
+    font-size: 5rem;
+    color: rgb(164, 82, 163);
+    border-bottom: 1rem solid rgb(164, 82, 163);
+    text-transform: uppercase;
+}
+
+h2::before {
+    content: attr(loading-text);
+    position: absolute;
+    color: rgb(42, 101, 101);
+    border-bottom: 1rem solid rgb(42, 101, 101);
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: loading 5s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes loading {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* pulsing circles effect */
+
+.pulsing-circles {
+    background-color: rgb(71, 150, 120);
+    height: 8rem;
+    width: 8rem;
+    border-radius: 100%;
+    position: relative;
+}
+
+.pulsing-circles__circle {
+    position: absolute;
+    background-color: inherit;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    opacity: 0.5;
+    animation: pulse 2s ease-out infinite;
+}
+
+.pulsing-circles:nth-child(1) {
+    animation-delay: -0.5s;
+}
+
+.pulsing-circles__circle:nth-of-type(2) {
+    animation-delay: -1s;
+}
+
+.pulsing-circles__circle:nth-of-type(3) {
+    animation-delay: -1.5s;
+}
+
+@keyframes pulse {
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
