@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .wrapper {
@@ -31,7 +32,7 @@ body {
     height: 10rem;
     width: 10rem;
     border-radius: 100%;
-    background-color: rgb(35, 91, 140);
+    background-color: rgb(44, 145, 167);
     animation-name: bounce;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -45,41 +46,43 @@ body {
 
 @keyframes bounce {
     0% {
-        transform: scaleY(0.1) translate3d(0, 0, 0);
+        transform: scaleY(0.4) translate3d(0, 0, 0);
     }
     25% {
-        transform: scaleY(0.5) translate3d(0, -100px, 0);
+        transform: scaleY(0.7) translate3d(0, -100px, 0);
     }
     50% {
-        transform: scaleY(0.9) translate3d(0, -300px, 0);
+        transform: scaleY(0.8) translate3d(0, -300px, 0);
     }
     75% {
-        transform: scaleY(1) translate3d(0, -400px, 0);
+        transform: scaleY(0.9) translate3d(0, -400px, 0);
     }
     100% {
-        transform: scaleY(0.3) translate3d(0, -200px, 0);
+        transform: scaleY(1) translate3d(0, -100px, 0);
     }
 }
 
 /* loading h2 part */
 
 .mini {
+    margin: 0 auto;
     width: min-content;
 }
 
 h2 {
     position: relative;
+    line-height: 4rem;
     font-size: 5rem;
-    color: rgb(164, 82, 163);
-    border-bottom: 1rem solid rgb(164, 82, 163);
+    color: rgb(198, 119, 185);
+    border-bottom: 1rem solid rgb(198, 119, 185);
     text-transform: uppercase;
 }
 
 h2::before {
     content: attr(loading-text);
     position: absolute;
-    color: rgb(42, 101, 101);
-    border-bottom: 1rem solid rgb(42, 101, 101);
+    color: rgb(63, 163, 163);
+    border-bottom: 1rem solid rgb(63, 163, 163);
     width: 100%;
     top: 0;
     left: 0;
@@ -99,7 +102,8 @@ h2::before {
 /* pulsing circles effect */
 
 .pulsing-circles {
-    background-color: rgb(71, 150, 120);
+    margin: 0 auto;
+    background-color: rgb(156, 233, 203);
     height: 8rem;
     width: 8rem;
     border-radius: 100%;
